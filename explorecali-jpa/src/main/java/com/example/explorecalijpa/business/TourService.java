@@ -11,24 +11,25 @@ import com.example.explorecalijpa.repo.TourRepository;
 
 @Service
 public class TourService {
-  private TourPackageRepository tourPackageRepository;
-  private TourRepository tourRepository;
+    private TourPackageRepository tourPackageRepository;
+    private TourRepository tourRepository;
 
-  public TourService(TourPackageRepository tourPackageRepository, TourRepository tourRepository) {
-    this.tourPackageRepository = tourPackageRepository;
-    this.tourRepository = tourRepository;
-  }
+    public TourService(TourPackageRepository tourPackageRepository, TourRepository tourRepository) {
+        this.tourPackageRepository = tourPackageRepository;
+        this.tourRepository = tourRepository;
+    }
 
-  public Tour createTour(String tourPackageName, String title,
-      String description, String blurb, Integer price, String duration,
-      String bullets, String keywords, Difficulty difficulty, Region region) {
+    public Tour createTour(String tourPackageName, String title,
+                           String description, String blurb, Integer price, String duration,
+                           String bullets, String keywords, Difficulty difficulty, Region region) {
 
-    TourPackage tourPackage = null;
-    return new Tour(title, description, blurb,
-        price, duration, bullets, keywords, tourPackage, difficulty, region);
-  }
+        TourPackage tourPackage = tourPackageRepository.findById(tourPackageName)
+                .orElseThrow(() -> new RuntimeException("Tour package not found for id: " + tourPackageName));
+        return tourRepository.save(new Tour(title, description, blurb,
+                price, duration, bullets, keywords, tourPackage, difficulty, region));
+    }
 
-  public long total() {
-    return 0;
-  }
+    public long total() {
+        return tourPackageRepository.count();
+    }
 }
