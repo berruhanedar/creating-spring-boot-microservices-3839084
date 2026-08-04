@@ -44,6 +44,16 @@ public class TourRatingController {
         return Map.of("average", tourRatingService.getAverageScore(tourId));
     }
 
+    @PutMapping
+    public RatingDto updateWithPut(@PathVariable(value = "tourId") int tourId,
+                                   @RequestBody @Valid RatingDto ratingDto) {
+        return new RatingDto(tourRatingService.update(tourId, ratingDto.getCustomerId(), ratingDto.getScore(), ratingDto.getComment()));
+    }
+
+    @DeleteMapping("{customerId}")
+    public void delete(@PathVariable(value="tourId") int tourId, @PathVariable(value="customerId") int customerId) {
+        tourRatingService.delete(tourId, customerId);
+    }
 
     @ExceptionHandler(NoSuchElementException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
