@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ded6af3-76f5-4bdf-9703-6976d64ef092" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/explorecali-jpa/src/main/resources/TourRatingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/explorecali-jpa/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/explorecali-jpa/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/explorecali-jpa/src/main/java/com/example/explorecalijpa/business/TourRatingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/explorecali-jpa/src/main/java/com/example/explorecalijpa/business/TourRatingService.java" afterDir="false" />
+    <list default="true" id="5ded6af3-76f5-4bdf-9703-6976d64ef092" name="Changes" comment="Create the RestController HTTP POST endpoint">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/explorecali-jpa/src/main/java/com/example/explorecalijpa/web/TourRatingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/explorecali-jpa/src/main/java/com/example/explorecalijpa/web/TourRatingController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,6 +75,15 @@
       <option name="presentableId" value="Default" />
       <updated>1785864205068</updated>
     </task>
+    <task id="LOCAL-00001" summary="Create the RestController HTTP POST endpoint">
+      <option name="closed" value="true" />
+      <created>1785865221000</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1785865221001</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -89,5 +96,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Create the RestController HTTP POST endpoint" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create the RestController HTTP POST endpoint" />
   </component>
 </project>
